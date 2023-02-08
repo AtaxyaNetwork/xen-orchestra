@@ -913,10 +913,10 @@ export default {
   remoteS3LabelUseHttps: 'Utiliser HTTPS',
 
   // Original text : "Allow unauthorized"
-  remoteS3LabelAllowInsecure: 'Autoriser les connexion insécures',
+  remoteS3LabelAllowInsecure: 'Autoriser les connexions non-sécurisés',
 
   // Original text : "AWS S3 endpoint (ex: s3.us-east-2.amazonaws.com)"
-  remoteS3PlaceHolderEndpoint: 'point de terminaison AWS S3 (ex: s3.us-east-2.amazonaws.com)',
+  remoteS3PlaceHolderEndpoint: 'Point de terminaison AWS S3 (ex: s3.us-east-2.amazonaws.com)',
 
   // Original text : "AWS S3 bucket name"
   remoteS3PlaceHolderBucket: 'Nom du bucket AWS S3',
@@ -928,14 +928,14 @@ export default {
   remoteS3PlaceHolderAccessKeyID: 'Clé d\'accès',
 
   // Original text : "Paste secret here to change it"
-  remoteS3PlaceHolderSecret: 'Entrer le secret ici pour le changer',
+  remoteS3PlaceHolderSecret: 'Secret',
 
   // Original text : "Enter your encryption key here (32 characters)"
-  remoteS3PlaceHolderEncryptionKey: 'Entrer votre clé de chiffrement ici (32 caractères)',
+  remoteS3PlaceHolderEncryptionKey: 'Clé de chiffrement (32 caractères)',
 
   // Original text : "Region, leave blank for default"
 
-  remoteS3Region: 'Région, laisser vide pour garder le paramètre par défaut',
+  remoteS3Region: 'Région (optionnel)',
 
   // Original text : "Uncheck if you want HTTP instead of HTTPS"
   remoteS3TooltipProtocol: 'Décocher pour utiliser HTTP au lieu de HTTPS',
