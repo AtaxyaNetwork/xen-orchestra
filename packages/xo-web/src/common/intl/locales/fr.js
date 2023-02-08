@@ -909,6 +909,40 @@ export default {
   // Original text: "Domain"
   remoteSmbPlaceHolderDomain: 'Domaine',
 
+  // Original text : "Use HTTPS"
+  remoteS3LabelUseHttps: 'Utiliser HTTPS',
+
+  // Original text : "Allow unauthorized"
+  remoteS3LabelAllowInsecure: 'Autoriser les connexion insécures',
+
+  // Original text : "AWS S3 endpoint (ex: s3.us-east-2.amazonaws.com)"
+  remoteS3PlaceHolderEndpoint: 'point de terminaison AWS S3 (ex: s3.us-east-2.amazonaws.com)',
+
+  // Original text : "AWS S3 bucket name"
+  remoteS3PlaceHolderBucket: 'Nom du bucket AWS S3',
+
+  // Original text : "Directory"
+  remoteS3PlaceHolderDirectory: 'Chemin',
+
+  // Original text : "Access key ID"
+  remoteS3PlaceHolderAccessKeyID: 'Clé d\'accès',
+
+  // Original text : "Paste secret here to change it"
+  remoteS3PlaceHolderSecret: 'Entrer le secret ici pour le changer',
+
+  // Original text : "Enter your encryption key here (32 characters)"
+  remoteS3PlaceHolderEncryptionKey: 'Entrer votre clé de chiffrement ici (32 caractères)',
+
+  // Original text : "Region, leave blank for default"
+
+  remoteS3Region: 'Région, laisser vide pour garder le paramètre par défaut',
+
+  // Original text : "Uncheck if you want HTTP instead of HTTPS"
+  remoteS3TooltipProtocol: 'Décocher pour utiliser HTTP au lieu de HTTPS',
+
+  // Original text : "Check if you want to accept self signed certificates"
+  remoteS3TooltipAcceptInsecure: 'Cochez pour accepter les certificats auto-signés',
+
   // Original text: "<address>\\<share> *"
   remoteSmbPlaceHolderAddressShare: '<adresse>\\<partage>',
 
