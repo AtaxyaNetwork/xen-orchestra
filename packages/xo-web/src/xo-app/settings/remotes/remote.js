@@ -498,7 +498,7 @@ export default decorate([
               autoComplete='new-password'
               className='form-control'
               name='encryptionKey'
-	       placeholder='Enter your encryption key here (32 characters)'
+	      placeholder='Enter your encryption key here (32 characters)'
               onChange={effects.linkState}
               pattern='^.{32}$'
               type='password'
