@@ -104,6 +104,8 @@ const DEFAULT_BLOCKED_LIST = {
   'xoa.supportTunnel.getState': true,
 }
 
+const DEFAULT_BLOCKED_REST_PATHS = [/\/events\/.*\/subscriptions/]
+
 const LAST_ID = 'lastId'
 
 // interface Db {
@@ -201,6 +203,7 @@ class AuditXoPlugin {
       ...DEFAULT_BLOCKED_LIST,
       ...staticConfig.blockedList,
     }
+    this._blockedRestPaths = [...DEFAULT_BLOCKED_REST_PATHS, ...(staticConfig.blockedRestPaths ?? [])]
     this._cleaners = []
     this._xo = xo
 
@@ -368,17 +371,25 @@ class AuditXoPlugin {
 
   async _handleEvent(event, { userId, userIp, userName, ...data }) {
     try {
-      if (event !== 'apiCall' || !this._blockedList[data.method]) {
-        return await this._auditCore.add(
-          {
-            userId,
-            userIp,
-            userName,
-          },
-          event,
-          data
-        )
+      // Skip JSON-RPC calls in the blocked list
+      if (event === 'apiCall' && this._blockedList[data.method]) {
+        return
       }
+
+      // Skip REST API calls with paths in the blocked list (REST API events have a path field)
+      if (data.path && this._blockedRestPaths.some(pattern => pattern.test(data.path))) {
+        return
+      }
+
+      return await this._auditCore.add(
+        {
+          userId,
+          userIp,
+          userName,
+        },
+        event,
+        data
+      )
     } catch (error) {
       log.error(error)
     }
